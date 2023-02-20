@@ -1,4 +1,4 @@
-local {
+locals {
  common_tag = {
   env = var.env
   project = "roboshop"
