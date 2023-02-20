@@ -25,5 +25,10 @@ resource "aws_vpc_peering_connection" "peer" {
   peer_vpc_id =  "vpc-0738d5702c63820c7"
   vpc_id = aws_vpc.main.id
   auto_accept = true
+
+ tags = merge(
+    local.common_tags,
+    {Name = "${var.env}-peering"}
+    )
   
 }
